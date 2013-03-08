@@ -28,10 +28,6 @@
                   <name>concordion.output.dir</name>
                   <value>target/concordion</value>
                   </property>
-                  <property>
-                      <name>webdriver.chrome.driver</name>
-                      <value>${basedir}/chromedriver.exe</value>
-                  </property>
               </systemProperties>
           </configuration>
       </plugin>
@@ -55,20 +51,41 @@
   </build>
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <groupId>ru.yandex.qatools.htmlelements</groupId>
+            <artifactId>htmlelements-java</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.yandex.qatools.htmlelements</groupId>
+            <artifactId>htmlelements-matchers</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.1.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>2.29.0</version>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.1.1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.concordion</groupId>
-            <artifactId>concordion</artifactId>
-            <version>1.4.2</version>
+	    <groupId>com.opera</groupId>
+            <artifactId>operadriver</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
