@@ -8,7 +8,7 @@ import cucumber.api.java.en.When;
 import com.github.cucumberdemo.pageobject.ToDoPage;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import com.opera.core.systems.OperaDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -16,12 +16,12 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class ToDoSteps {
-    public static final String BASE_URL = "http://localhost:9090";
+    public static final String BASE_URL = "http://javadev.github.com/todo-backbone-cucumber-demo/";
     private ToDoPage page;
 
     @Before
     public void setUpScenario() throws Exception {
-        page = new ToDoPage(new OperaDriver());
+        page = new ToDoPage(new FirefoxDriver());
     }
 
     @After

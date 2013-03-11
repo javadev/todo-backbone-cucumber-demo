@@ -11,6 +11,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jetty.version>7.5.0.v20110901</jetty.version>
+    <selenium.version>2.31.0</selenium.version>
   </properties>
 
   <build>
@@ -74,9 +75,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-	    <groupId>com.opera</groupId>
-            <artifactId>operadriver</artifactId>
-            <version>1.2</version>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
